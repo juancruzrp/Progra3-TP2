@@ -8,6 +8,10 @@ namespace TrabajoPracticoDos
 {
     internal static class Program
     {
+        /// COMENTARIO PRUEBA
+        /// prueba1
+        /// prueba2
+
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
