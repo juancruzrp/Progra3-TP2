@@ -16,6 +16,7 @@ namespace TrabajoPracticoDos
         {
             /// prueba
             /// comentario 30/08
+            /// holaaaaaa
             InitializeComponent();
         }
     }
