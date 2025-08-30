@@ -15,6 +15,7 @@ namespace TrabajoPracticoDos
         public Form1()
         {
             /// prueba
+            /// comentario 30/08
             InitializeComponent();
         }
     }
