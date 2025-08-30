@@ -11,7 +11,7 @@ namespace TrabajoPracticoDos
         /// COMENTARIO PRUEBA
     
         /// <summary>
-        /// Punto de entrada principal para la aplicación.
+        /// Punto de entrada principal para la aplicación. hhh ggg
         /// </summary>
         [STAThread]
         static void Main()
