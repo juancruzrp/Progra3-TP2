@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Articulo.cs" />
     <Compile Include="ArticuloNegocio.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="frmArticulo.cs">
@@ -55,7 +56,6 @@
       <DependentUpon>frmArticulo.cs</DependentUpon>
     </Compile>
     <Compile Include="Marca.cs" />
-    <Compile Include="Articulo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\articulos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
