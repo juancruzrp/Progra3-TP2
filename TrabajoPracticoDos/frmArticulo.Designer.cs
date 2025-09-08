@@ -39,13 +39,13 @@
             this.dgvArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulo.Location = new System.Drawing.Point(12, 88);
             this.dgvArticulo.Name = "dgvArticulo";
-            this.dgvArticulo.Size = new System.Drawing.Size(566, 270);
+            this.dgvArticulo.Size = new System.Drawing.Size(644, 275);
             this.dgvArticulo.TabIndex = 0;
             this.dgvArticulo.SelectionChanged += new System.EventHandler(this.dgvArticulo_SelectionChanged);
             // 
             // pbxArticulo
             // 
-            this.pbxArticulo.Location = new System.Drawing.Point(607, 48);
+            this.pbxArticulo.Location = new System.Drawing.Point(675, 33);
             this.pbxArticulo.Name = "pbxArticulo";
             this.pbxArticulo.Size = new System.Drawing.Size(326, 330);
             this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -56,10 +56,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 442);
+            this.ClientSize = new System.Drawing.Size(1044, 429);
             this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.dgvArticulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmArticulo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).EndInit();

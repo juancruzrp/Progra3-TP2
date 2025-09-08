@@ -25,6 +25,8 @@ namespace TrabajoPracticoDos
             ArticuloNegocio artNegocio = new ArticuloNegocio();
             listaArticulo = artNegocio.listar();
             dgvArticulo.DataSource = listaArticulo;
+            dgvArticulo.Columns["ImagenUrl"].Visible = false;
+            dgvArticulo.Columns["Id"].Visible = false;
             cargarImagen(listaArticulo[0].ImagenUrl);
         }
 
