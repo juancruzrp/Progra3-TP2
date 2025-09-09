@@ -7,9 +7,9 @@ using System.Data.SqlClient;
 using Dominio;
 
 
-namespace TrabajoPracticoDos
+namespace Negocio
 {
-    internal class ArticuloNegocio
+    public class ArticuloNegocio
     {
         public List<Articulo> listar()
         {
