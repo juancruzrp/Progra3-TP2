@@ -66,5 +66,30 @@ namespace Negocio
 
         }
 
+        public void agregar(Articulo nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {   //falta agregar la consulta para poder carrgar datos
+                datos.setearConsulta("");
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void modificar(Articulo modificar)
+        {
+
+        }
     }
 }
