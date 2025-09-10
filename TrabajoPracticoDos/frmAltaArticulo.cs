@@ -34,9 +34,9 @@ namespace TrabajoPracticoDos
                 nuevo.Nombre = txtNombre.Text;
                 nuevo.Descripcion = txtDescripcion.Text;
 
-                //negocio.agregar(nuevo);
-                //MessageBox.Show("Articulo agregado con exito.");
-                //Close();
+                negocio.agregar(nuevo);
+                MessageBox.Show("Articulo agregado con exito.");
+                Close();
             }
             catch (Exception ex)
             {   //hacer esta parte mas user friendly xd

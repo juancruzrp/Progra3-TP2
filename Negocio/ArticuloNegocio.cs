@@ -57,15 +57,16 @@ namespace Negocio
         }
         
 
-        /*public void agregar(Articulo nuevo)
+        public void agregar(Articulo nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
 
             try
             {   //falta agregar la consulta para poder carrgar datos
-                datos.setearConsulta("Insert into ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria) values(" + nuevo.Codigo "','" + nuevo.Nombre "','"nuevo.Descripcion+ "', @IdMarca, @IdCategoria)");
-                datos.setearParametro("@IdMarca", nuevo.Marca.Id);
-                datos.setearParametro("@IdCategoria", nuevo.Categoria.Id);
+                //datos.setearConsulta("Insert into ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria) values(" + nuevo.Codigo ", '" + nuevo.Nombre ", '"nuevo.Descripcion+ "', @IdMarca, @IdCategoria)");
+                //datos.setearParametro("@IdMarca", nuevo.Marca.Id);
+                //datos.setearParametro("@IdCategoria", nuevo.Categoria.Id);
+                datos.setearConsulta("Insert into");
                 datos.ejecutarAccion();
 
             }
@@ -83,7 +84,7 @@ namespace Negocio
         public void modificar(Articulo modificar)
         {
 
-        }*/
+        }
 
     }
 }
