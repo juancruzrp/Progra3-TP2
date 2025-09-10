@@ -18,7 +18,7 @@ namespace Negocio
             get { return lector; }
         }
 
-        // Cambiar el nombre del constructor de 'AccesoDatos' a 'Acceso' para que sea un constructor válido de la clase.
+// Cambiar el nombre del constructor de 'AccesoDatos' a 'Acceso' para que sea un constructor válido de la clase.
         public AccesoDatos()
         {
             conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");
@@ -68,7 +68,7 @@ namespace Negocio
         {
             if (lector != null)
                 lector.Close();
-            conexion.Close();
+                conexion.Close();
         }
 
     }
