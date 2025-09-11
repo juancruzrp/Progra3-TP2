@@ -47,7 +47,7 @@ namespace TrabajoPracticoDos
                 pbxArticulo.Load(imagen);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 pbxArticulo.Load("https://png.pngtree.com/png-vector/20221125/ourmid/pngtree-illustration-of-a-flat-vector-icon-set-featuring-a-camera-symbol-and-a-placeholder-image-icon-vector-png-image_40968740.jpg");
