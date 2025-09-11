@@ -38,8 +38,11 @@
             // dgvArticulo
             // 
             this.dgvArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArticulo.Location = new System.Drawing.Point(12, 88);
+            this.dgvArticulo.MultiSelect = false;
             this.dgvArticulo.Name = "dgvArticulo";
+            this.dgvArticulo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulo.Size = new System.Drawing.Size(644, 275);
             this.dgvArticulo.TabIndex = 0;
             this.dgvArticulo.SelectionChanged += new System.EventHandler(this.dgvArticulo_SelectionChanged);

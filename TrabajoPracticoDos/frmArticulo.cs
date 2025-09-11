@@ -25,18 +25,31 @@ namespace TrabajoPracticoDos
 
         private void frmArticulo_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio artNegocio = new ArticuloNegocio();
-            listaArticulo = artNegocio.listar();
-            dgvArticulo.DataSource = listaArticulo;
-            dgvArticulo.Columns["ImagenUrl"].Visible = false;
-            dgvArticulo.Columns["Id"].Visible = false;
-            cargarImagen(listaArticulo[0].ImagenUrl);
+            cargar();
+            
         }
 
         private void dgvArticulo_SelectionChanged(object sender, EventArgs e)
         {
             Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
             cargarImagen(seleccionado.ImagenUrl);
+        }
+
+        private void cargar()
+        {
+            ArticuloNegocio artNegocio = new ArticuloNegocio();
+            try
+            {
+                listaArticulo = artNegocio.listar();
+                dgvArticulo.DataSource = listaArticulo;
+                dgvArticulo.Columns["ImagenUrl"].Visible = false;
+                dgvArticulo.Columns["Id"].Visible = false;
+                cargarImagen(listaArticulo[0].ImagenUrl);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void cargarImagen(string imagen)
@@ -58,6 +71,7 @@ namespace TrabajoPracticoDos
         {
             frmAltaArticulo alta = new frmAltaArticulo();
             alta.ShowDialog();
+            cargar();
         }
     }
 }

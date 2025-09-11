@@ -67,9 +67,9 @@
             this.lbDescripcion.AutoSize = true;
             this.lbDescripcion.Location = new System.Drawing.Point(44, 143);
             this.lbDescripcion.Name = "lbDescripcion";
-            this.lbDescripcion.Size = new System.Drawing.Size(60, 13);
+            this.lbDescripcion.Size = new System.Drawing.Size(66, 13);
             this.lbDescripcion.TabIndex = 2;
-            this.lbDescripcion.Text = "Desripcion:";
+            this.lbDescripcion.Text = "Descripcion:";
             // 
             // txtCodigo
             // 
@@ -117,27 +117,27 @@
             this.lblMarca.AutoSize = true;
             this.lblMarca.Location = new System.Drawing.Point(44, 188);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(37, 13);
+            this.lblMarca.Size = new System.Drawing.Size(40, 13);
             this.lblMarca.TabIndex = 8;
-            this.lblMarca.Text = "Marca";
+            this.lblMarca.Text = "Marca:";
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Location = new System.Drawing.Point(44, 228);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(52, 13);
+            this.lblCategoria.Size = new System.Drawing.Size(55, 13);
             this.lblCategoria.TabIndex = 9;
-            this.lblCategoria.Text = "Categoria";
+            this.lblCategoria.Text = "Categoria:";
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Location = new System.Drawing.Point(44, 272);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(37, 13);
+            this.lblPrecio.Size = new System.Drawing.Size(40, 13);
             this.lblPrecio.TabIndex = 10;
-            this.lblPrecio.Text = "Precio";
+            this.lblPrecio.Text = "Precio:";
             // 
             // cboMarca
             // 

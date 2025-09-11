@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Dominio;
 using System.Globalization;
+using System.Net;
 
 
 namespace Negocio
@@ -27,19 +28,29 @@ namespace Negocio
                 {
                     Articulo aux = new Articulo();
                     aux.Id = (int)datos.Lector["Id"];
-                    aux.Codigo = (string)datos.Lector["Codigo"];
-                    aux.Nombre = (string)datos.Lector["Nombre"];
-                    aux.Descripcion = (string)datos.Lector["Descripcion"];
 
+                    if (!(datos.Lector["Codigo"] is DBNull))
+                        aux.Codigo = (string)datos.Lector["Codigo"];
+
+                    if (!(datos.Lector["Nombre"] is DBNull))
+                        aux.Nombre = (string)datos.Lector["Nombre"];
+
+                    if (!(datos.Lector["Descripcion"] is DBNull))
+                        aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    
                     aux.Marca = new Marca();
-                    aux.Marca.Descripcion = (string)datos.Lector["Marca"];
-
+                    if (!(datos.Lector["Marca"] is DBNull))
+                        aux.Marca.Descripcion = (string)datos.Lector["Marca"];
+                    
                     aux.Categoria = new Categoria();
-                    aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
+                    if (!(datos.Lector["Categoria"] is DBNull))
+                        aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
 
-                    aux.Precio = Convert.ToDouble(datos.Lector["Precio"]);
+                    if (!(datos.Lector["Precio"] is DBNull))
+                        aux.Precio = Convert.ToDouble(datos.Lector["Precio"]);
+                    
                     aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
-
+                                                            
                     lista.Add(aux);
                 }
 
