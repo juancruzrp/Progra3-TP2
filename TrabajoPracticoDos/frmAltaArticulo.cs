@@ -74,5 +74,10 @@ namespace TrabajoPracticoDos
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void lbNombre_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
