@@ -30,15 +30,15 @@ namespace TrabajoPracticoDos
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
-                /*nuevo.Codigo = txtCodigo.Text;
+                nuevo.Codigo = txtCodigo.Text;
                 nuevo.Nombre = txtNombre.Text;
                 nuevo.Descripcion = txtDescripcion.Text;
 
-                nuevo.Marca = new Marca();
-                nuevo.Marca.Descripcion = int.Parse(txtMarca.Text);
+                ///nuevo.Marca = new Marca();
+                ///nuevo.Marca.Descripcion = txtMarca.Text;
 
-                nuevo.Categoria = new Categoria();
-                nuevo.Categoria.Descripcion = int.Parse(txtCategoria.Text);
+                ///nuevo.Categoria = new Categoria();
+                ///nuevo.Categoria.Descripcion = txtCategoria.Text;
 
 
 
@@ -46,7 +46,7 @@ namespace TrabajoPracticoDos
 
                 negocio.agregar(nuevo);
                 MessageBox.Show("Articulo agregado con exito.");
-                Close();*/
+                Close();
             }
             catch (Exception ex)
             {   //hacer esta parte mas user friendly xd

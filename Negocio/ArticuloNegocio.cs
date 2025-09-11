@@ -63,16 +63,16 @@ namespace Negocio
 
             try
             {   //falta agregar la consulta para poder carrgar datos
-<<<<<<< HEAD
+
                 datos.setearConsulta("INSERT INTO ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria) " + "VALUES(" + nuevo.Codigo + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion + "', @IdMarca, @IdCategoria)");
                 datos.setearParametro("@IdMarca", nuevo.Marca.Id);
                 datos.setearParametro("@IdCategoria", nuevo.Categoria.Id);
-=======
+
                 //datos.setearConsulta("Insert into ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria) values(" + nuevo.Codigo ", '" + nuevo.Nombre ", '"nuevo.Descripcion+ "', @IdMarca, @IdCategoria)");
                 //datos.setearParametro("@IdMarca", nuevo.Marca.Id);
                 //datos.setearParametro("@IdCategoria", nuevo.Categoria.Id);
                 datos.setearConsulta("Insert into");
->>>>>>> 448ce09bdd3a7ec586a14c9302be431347dfadaa
+
                 datos.ejecutarAccion();
 
             }
