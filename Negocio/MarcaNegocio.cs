@@ -85,6 +85,66 @@ namespace Negocio
 
     }
 
+        public List<Marca> buscarPorNombre(string nombre)
+        {
+            List<Marca> lista = new List<Marca>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+
+            {
+                datos.setearConsulta("SELECT Id, Descripcion FROM MARCAS WHERE Descripcion LIKE @nombre");
+                datos.setearParametro("@nombre", "%" + nombre + "%");
+
+                while (datos.Lector.Read())
+                {
+                    Marca aux = new Marca();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    lista.Add(aux);
+                }
+
+                return lista;
+
+            }
+
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
+        public bool existeMarcaPorId (int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("SELECT COUNT(1) FROM MARCAS WHERE Id = @id");
+                datos.setearParametro("@id", id);
+                datos.ejecutarLectura();
+                if (datos.Lector.Read())
+                {
+                    int count = (int)datos.Lector[0];
+                    return count > 0;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+
         public void eliminarLogico(int id)
         {
             try
