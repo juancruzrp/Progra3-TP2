@@ -22,7 +22,7 @@ namespace Negocio
                 datos.setearConsulta("select A.Id, Codigo, Nombre, A.Descripcion, M.Descripcion as Marca, C.Descripcion as Categoria, Precio, ImagenUrl from ARTICULOS A, IMAGENES I, MARCAS M, CATEGORIAS C where A.Id = I.IdArticulo and A.IdMarca = M.Id and A.IdCategoria = C.Id");
                 datos.ejecutarLectura();
 
-
+               
                 while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
