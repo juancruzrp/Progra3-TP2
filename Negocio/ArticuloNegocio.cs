@@ -74,11 +74,18 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio)values(" + nuevo.Codigo + ", '" + nuevo.Nombre + "', '" + nuevo.Descripcion +  "', @IdMarca, @IdCategoria, " + nuevo.Precio  +")"); 
+                datos.setearConsulta(
+                "insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) " +
+                "values (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio); " +
+                "SELECT CAST(SCOPE_IDENTITY() AS INT);");
+
+                datos.setearParametro("@Codigo", nuevo.Codigo);
+                datos.setearParametro("@Nombre", nuevo.Nombre);
+                datos.setearParametro("@Descripcion", nuevo.Descripcion);
                 datos.setearParametro("@IdMarca", nuevo.Marca.Id);
                 datos.setearParametro("@IdCategoria", nuevo.Categoria.Id);
-                datos.ejecutarAccion();
-                
+                datos.setearParametro("@Precio", nuevo.Precio);
+
                 int idGenerado = Convert.ToInt32(datos.ejecutarScalar());
                 nuevo.Id = idGenerado;
                 return idGenerado;

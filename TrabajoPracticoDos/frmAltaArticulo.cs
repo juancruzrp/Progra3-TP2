@@ -33,7 +33,7 @@ namespace TrabajoPracticoDos
             {
                 nuevo.Codigo = txtCodigo.Text;
                 nuevo.Nombre = txtNombre.Text;
-                nuevo.Descripcion = txtNombre.Text;
+                nuevo.Descripcion = txtDescripcion.Text;
                 nuevo.Marca = (Marca)cboMarca.SelectedItem;
                 nuevo.Categoria = (Categoria)cboCategoria.SelectedItem;
                 
@@ -44,7 +44,7 @@ namespace TrabajoPracticoDos
                 }
                 else
                 {
-                    negocio.agregar(nuevo);
+                    
                     int idArticulo = negocio.agregar(nuevo);
                     negocio.agregarImagen(idArticulo, txtUrlImagen.Text);
 
