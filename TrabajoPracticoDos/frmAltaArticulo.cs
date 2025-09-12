@@ -33,22 +33,23 @@ namespace TrabajoPracticoDos
             {
                 nuevo.Codigo = txtCodigo.Text;
                 nuevo.Nombre = txtNombre.Text;
+                nuevo.Descripcion = txtNombre.Text;
                 nuevo.Marca = (Marca)cboMarca.SelectedItem;
                 nuevo.Categoria = (Categoria)cboCategoria.SelectedItem;
-
-
+                
                 if (nuevo.Id != 0)
                 {
                     negocio.modificar(nuevo);
-                MessageBox.Show("Modificado exitosamente");
+                    MessageBox.Show("Modificado exitosamente");
                 }
                 else
                 {
                     negocio.agregar(nuevo);
+                    /// negocio.agregarImagen(nuevo.Id, txtImagenUrl.Text);
                     MessageBox.Show("Agregado exitosamente");
+
                 }
-                negocio.agregar(nuevo);
-                MessageBox.Show("Articulo agregado con exito.");
+                
                 Close();
             }
             catch (Exception ex)
@@ -75,6 +76,27 @@ namespace TrabajoPracticoDos
             }
         }
 
-                
+        private void txtUrlImagen_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtUrlImagen.Text);
+        }
+
+
+        private void cargarImagen(string imagen)
+        {
+
+            try
+            {
+                pbxArticulo.Load(imagen);
+
+            }
+            catch (Exception)
+            {
+
+                pbxArticulo.Load("https://png.pngtree.com/png-vector/20221125/ourmid/pngtree-illustration-of-a-flat-vector-icon-set-featuring-a-camera-symbol-and-a-placeholder-image-icon-vector-png-image_40968740.jpg");
+            }
+        }
+
+
     }
 }
