@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -71,6 +72,25 @@ namespace Negocio
             if (lector != null)
                 lector.Close();
                 conexion.Close();
+        }
+
+        public object ejecutarScalar()
+        {
+            try
+            {
+                if (comando.Connection.State != ConnectionState.Open)
+                    comando.Connection.Open();
+
+                return comando.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                comando.Connection.Close();
+            }
         }
 
 

@@ -45,9 +45,10 @@ namespace TrabajoPracticoDos
                 else
                 {
                     negocio.agregar(nuevo);
-                    /// negocio.agregarImagen(nuevo.Id, txtImagenUrl.Text);
-                    MessageBox.Show("Agregado exitosamente");
+                    int idArticulo = negocio.agregar(nuevo);
+                    negocio.agregarImagen(idArticulo, txtImagenUrl.Text);
 
+                    MessageBox.Show("Agregado exitosamente");
                 }
                 
                 Close();
