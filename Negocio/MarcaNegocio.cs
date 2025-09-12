@@ -58,7 +58,7 @@ namespace Negocio
             finally
             {
                 datos.cerrarConexion();
-                            }
+            }
         }
 
         public void modificar (Marca marca)
