@@ -47,27 +47,35 @@ namespace TrabajoPracticoDos
             }   
 
         }
-
+        // base de datos
         private void button1_Click(object sender, EventArgs e)
         {
-            Marca seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
-            MarcaNegocio negocio = new MarcaNegocio();
-            try
-            {
-            DialogResult respuesta = MessageBox.Show("¿Seguro que desea eliminar la marca " + seleccionado.Descripcion + "?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (respuesta==DialogResult.Yes)
-                {
-                    negocio.eliminarLogico(seleccionado.Id);
-                    cargar();
-                }
-               
-              }
 
-            catch (Exception ex)
-            {
-            MessageBox.Show(ex.ToString());
+        }
 
-            }
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmMarca_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
