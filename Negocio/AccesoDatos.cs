@@ -55,6 +55,7 @@ namespace Negocio
             {
                 conexion.Open();
                 comando.ExecuteNonQuery();
+                conexion.Close();
             }
             catch (Exception ex)
             {
@@ -78,10 +79,13 @@ namespace Negocio
         {
             try
             {
-                if (comando.Connection.State != ConnectionState.Open)
-                    comando.Connection.Open();
+                comando.Connection = conexion;
+                if (conexion.State != ConnectionState.Open)
+                    conexion.Open();
 
-                return comando.ExecuteScalar();
+                object result = comando.ExecuteScalar();
+                conexion.Close();
+                return result;
             }
             catch (Exception ex)
             {
@@ -89,7 +93,7 @@ namespace Negocio
             }
             finally
             {
-                comando.Connection.Close();
+                conexion.Close();
             }
         }
 
