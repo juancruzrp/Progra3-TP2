@@ -69,7 +69,7 @@ namespace TrabajoPracticoDos
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAltaArticulo alta = new frmAltaArticulo();
+            frmTipoAlta alta = new frmTipoAlta();
             alta.ShowDialog();
             cargar();
         }

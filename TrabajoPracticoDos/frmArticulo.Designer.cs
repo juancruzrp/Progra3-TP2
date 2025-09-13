@@ -60,9 +60,9 @@
             // 
             this.btnAgregar.Location = new System.Drawing.Point(22, 378);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(123, 39);
             this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Text = "Agregar Nuevo";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
