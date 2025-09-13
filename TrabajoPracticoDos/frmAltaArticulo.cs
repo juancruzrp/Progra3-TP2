@@ -58,7 +58,6 @@ namespace TrabajoPracticoDos
 
                     MessageBox.Show("Agregado exitosamente");
                 }
-                
                 Close();
             }
             catch (Exception ex)

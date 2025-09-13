@@ -50,6 +50,7 @@
             this.btnAgregarCategoria.TabIndex = 1;
             this.btnAgregarCategoria.Text = "Agregar Categoria";
             this.btnAgregarCategoria.UseVisualStyleBackColor = true;
+            this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
             // 
             // btnEliminarCategoria
             // 
@@ -69,6 +70,7 @@
             this.Controls.Add(this.btnAgregarCategoria);
             this.Controls.Add(this.dgvCategoria);
             this.Name = "frmCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventana Categorias";
             this.Load += new System.EventHandler(this.frmCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).EndInit();

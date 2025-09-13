@@ -44,5 +44,12 @@ namespace TrabajoPracticoDos
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            frmAltaCategoria alta = new frmAltaCategoria();
+            alta.ShowDialog();
+            cargarCategoria();
+        }
     }
 }
