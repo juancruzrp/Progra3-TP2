@@ -32,6 +32,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblNuevaCategoria = new System.Windows.Forms.Label();
             this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.lblIDCategoria = new System.Windows.Forms.Label();
+            this.txtIDCategoria = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -70,11 +72,29 @@
             this.txtCategoria.Size = new System.Drawing.Size(100, 20);
             this.txtCategoria.TabIndex = 3;
             // 
+            // lblIDCategoria
+            // 
+            this.lblIDCategoria.AutoSize = true;
+            this.lblIDCategoria.Location = new System.Drawing.Point(75, 45);
+            this.lblIDCategoria.Name = "lblIDCategoria";
+            this.lblIDCategoria.Size = new System.Drawing.Size(84, 13);
+            this.lblIDCategoria.TabIndex = 4;
+            this.lblIDCategoria.Text = "ID de Categoria:";
+            // 
+            // txtIDCategoria
+            // 
+            this.txtIDCategoria.Location = new System.Drawing.Point(165, 42);
+            this.txtIDCategoria.Name = "txtIDCategoria";
+            this.txtIDCategoria.Size = new System.Drawing.Size(100, 20);
+            this.txtIDCategoria.TabIndex = 5;
+            // 
             // frmAltaCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 284);
+            this.Controls.Add(this.txtIDCategoria);
+            this.Controls.Add(this.lblIDCategoria);
             this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.lblNuevaCategoria);
             this.Controls.Add(this.btnCancelar);
@@ -93,5 +113,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblNuevaCategoria;
         private System.Windows.Forms.TextBox txtCategoria;
+        private System.Windows.Forms.Label lblIDCategoria;
+        private System.Windows.Forms.TextBox txtIDCategoria;
     }
 }

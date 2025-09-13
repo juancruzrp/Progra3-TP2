@@ -38,6 +38,7 @@ namespace TrabajoPracticoDos
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.Size = new System.Drawing.Size(240, 150);
             this.dgvMarcas.TabIndex = 0;
+            this.dgvMarcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarcas_CellContentClick);
             // 
             // btnAgregarMarca
             // 
@@ -47,6 +48,7 @@ namespace TrabajoPracticoDos
             this.btnAgregarMarca.TabIndex = 1;
             this.btnAgregarMarca.Text = "Agregar Marca";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
+            this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
             // 
             // btnEliminarMarca
             // 
@@ -83,7 +85,7 @@ namespace TrabajoPracticoDos
             {
               MarcaNegocio negocio = new MarcaNegocio();
                 dgvMarcas.DataSource = negocio.listar();
-                dgvMarcas.Columns["Id"].Visible = false;
+                dgvMarcas.Columns["Id"].Visible = true;
 
             }
             catch (Exception ex)
@@ -92,5 +94,16 @@ namespace TrabajoPracticoDos
             }
         }
 
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
+        {
+            frmAltaMarca alta = new frmAltaMarca();
+            alta.ShowDialog();
+            cargarMarca();
+        }
+
+        private void dgvMarcas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -12,22 +12,27 @@ using System.Windows.Forms;
 
 namespace TrabajoPracticoDos
 {
-    public partial class frmAltaCategoria : Form
+    public partial class frmAltaMarca : Form
     {
-        public frmAltaCategoria()
+        public frmAltaMarca()
         {
             InitializeComponent();
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Categoria nueva = new Categoria();
-            CategoriaNegocio negocio = new CategoriaNegocio();
+            Marca nueva = new Marca();
+            MarcaNegocio negocio = new MarcaNegocio();
 
             try
             {
-                nueva.Id = int.Parse(txtIDCategoria.Text);
-                nueva.Descripcion = txtCategoria.Text;
+                nueva.Id = int.Parse(txtIDMarca.Text);
+                nueva.Descripcion = txtMarca.Text;
                 negocio.agregar(nueva);
                 MessageBox.Show("Agregado exitosamente");
                 Close();
@@ -38,10 +43,6 @@ namespace TrabajoPracticoDos
                 MessageBox.Show(ex.ToString());
             }
         }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
     }
+    
 }

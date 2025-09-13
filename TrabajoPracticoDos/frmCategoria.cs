@@ -37,7 +37,7 @@ namespace TrabajoPracticoDos
             {
                 CategoriaNegocio negocio = new CategoriaNegocio();
                 dgvCategoria.DataSource = negocio.listarCategorias();
-                dgvCategoria.Columns["Id"].Visible = false;
+                dgvCategoria.Columns["Id"].Visible = true;
             }
             catch (Exception ex)
             {
