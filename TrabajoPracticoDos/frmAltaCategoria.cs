@@ -26,7 +26,6 @@ namespace TrabajoPracticoDos
 
             try
             {
-                nueva.Id = int.Parse(txtIDCategoria.Text);
                 nueva.Descripcion = txtCategoria.Text;
                 negocio.agregar(nueva);
                 MessageBox.Show("Agregado exitosamente");
@@ -42,6 +41,11 @@ namespace TrabajoPracticoDos
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void frmAltaCategoria_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

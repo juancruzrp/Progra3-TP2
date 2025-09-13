@@ -31,7 +31,6 @@ namespace TrabajoPracticoDos
 
             try
             {
-                nueva.Id = int.Parse(txtIDMarca.Text);
                 nueva.Descripcion = txtMarca.Text;
                 negocio.agregar(nueva);
                 MessageBox.Show("Agregado exitosamente");
@@ -42,6 +41,11 @@ namespace TrabajoPracticoDos
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void frmAltaMarca_Load(object sender, EventArgs e)
+        {
+
         }
     }
     

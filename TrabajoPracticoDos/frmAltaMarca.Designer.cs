@@ -32,8 +32,6 @@
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtIDMarca = new System.Windows.Forms.TextBox();
-            this.lblIDMarca = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNuevaMarca
@@ -72,35 +70,18 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // txtIDMarca
-            // 
-            this.txtIDMarca.Location = new System.Drawing.Point(156, 47);
-            this.txtIDMarca.Name = "txtIDMarca";
-            this.txtIDMarca.Size = new System.Drawing.Size(100, 20);
-            this.txtIDMarca.TabIndex = 7;
-            // 
-            // lblIDMarca
-            // 
-            this.lblIDMarca.AutoSize = true;
-            this.lblIDMarca.Location = new System.Drawing.Point(66, 50);
-            this.lblIDMarca.Name = "lblIDMarca";
-            this.lblIDMarca.Size = new System.Drawing.Size(80, 13);
-            this.lblIDMarca.TabIndex = 6;
-            this.lblIDMarca.Text = "ID de la Marca:";
-            // 
             // frmAltaMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 249);
-            this.Controls.Add(this.txtIDMarca);
-            this.Controls.Add(this.lblIDMarca);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.lblNuevaMarca);
             this.Name = "frmAltaMarca";
             this.Text = "frmAltaMarca";
+            this.Load += new System.EventHandler(this.frmAltaMarca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,7 +93,5 @@
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.TextBox txtIDMarca;
-        private System.Windows.Forms.Label lblIDMarca;
     }
 }
