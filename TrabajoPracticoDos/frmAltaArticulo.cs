@@ -85,8 +85,12 @@ namespace TrabajoPracticoDos
             try
             {
                 cboMarca.DataSource = marcaNegocio.listar();
+                cboMarca.ValueMember = "Id";
+                cboMarca.DisplayMember = "Descripcion";
                 cboCategoria.DataSource = categoriaNegocio.listarCategorias();
-                
+                cboCategoria.ValueMember = "Id";
+                cboCategoria.DisplayMember = "Descripcion";
+
                 if (Articulo != null)
                 {
                     txtCodigo.Text = Articulo.Codigo;
@@ -94,10 +98,11 @@ namespace TrabajoPracticoDos
                     txtDescripcion.Text = Articulo.Descripcion;
                     txtPrecio.Text = Articulo.Precio.ToString();
                     txtUrlImagen.Text = Articulo.ImagenUrl;
+                    cargarImagen(Articulo.ImagenUrl);
                     cboMarca.SelectedValue = Articulo.Marca.Id;
                     cboCategoria.SelectedValue = Articulo.Categoria.Id;
-                    cargarImagen(Articulo.ImagenUrl);
-                }
+           
+            }
             }
             catch (Exception ex)
             {
