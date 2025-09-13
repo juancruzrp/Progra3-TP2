@@ -51,5 +51,27 @@ namespace TrabajoPracticoDos
             alta.ShowDialog();
             cargarCategoria();
         }
+
+        private void btnEliminarCategoria_Click(object sender, EventArgs e)
+        {
+            CategoriaNegocio negocio = new CategoriaNegocio();
+            Categoria seleccionada;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Desea eliminar permanentemente esta categoria?","Eliminar",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                if(respuesta == DialogResult.Yes)
+                {
+                    seleccionada = (Categoria)dgvCategoria.CurrentRow.DataBoundItem;
+                    negocio.eliminarFisico(seleccionada.Id);
+                    cargarCategoria();
+                }
+               
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

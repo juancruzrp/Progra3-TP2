@@ -60,6 +60,7 @@
             this.btnEliminarCategoria.TabIndex = 2;
             this.btnEliminarCategoria.Text = "Eliminar Categoria";
             this.btnEliminarCategoria.UseVisualStyleBackColor = true;
+            this.btnEliminarCategoria.Click += new System.EventHandler(this.btnEliminarCategoria_Click);
             // 
             // frmCategoria
             // 
