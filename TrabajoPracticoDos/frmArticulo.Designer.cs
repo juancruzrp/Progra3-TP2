@@ -31,6 +31,7 @@
             this.dgvArticulo = new System.Windows.Forms.DataGridView();
             this.pbxArticulo = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.SuspendLayout();
@@ -66,11 +67,22 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(171, 378);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 39);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Modificar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 429);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.dgvArticulo);
@@ -91,6 +103,7 @@
         private System.Windows.Forms.DataGridView dgvArticulo;
         private System.Windows.Forms.PictureBox pbxArticulo;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button button1;
     }
 }
 

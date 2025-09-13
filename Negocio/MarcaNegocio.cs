@@ -41,6 +41,9 @@ namespace Negocio
             return lista;
 
         }
+
+
+
         public void agregar(Marca nueva) {
 
             AccesoDatos datos= new AccesoDatos ();
@@ -119,14 +122,15 @@ namespace Negocio
 
         }
 
-        public bool existeMarcaPorId (int id)
+        public bool existeMarcaPorDescripcion(string descripcion)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("SELECT COUNT(1) FROM MARCAS WHERE Id = @id");
-                datos.setearParametro("@id", id);
+                datos.setearConsulta("SELECT COUNT(1) FROM MARCAS WHERE Descripcion = @descripcion");
+                datos.setearParametro("@descripcion", descripcion);
                 datos.ejecutarLectura();
+
                 if (datos.Lector.Read())
                 {
                     int count = (int)datos.Lector[0];

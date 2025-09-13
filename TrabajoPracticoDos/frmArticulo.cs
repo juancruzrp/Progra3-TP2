@@ -73,5 +73,15 @@ namespace TrabajoPracticoDos
             alta.ShowDialog();
             cargar();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        ///private void btnModificar(object sender, EventArgs e)
+
+
+
     }
 }

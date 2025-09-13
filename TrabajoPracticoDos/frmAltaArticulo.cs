@@ -14,6 +14,8 @@ namespace TrabajoPracticoDos
 {
     public partial class frmAltaArticulo : Form
     {
+        // Agregar este campo a la clase frmAltaArticulo
+        private Articulo Articulo;
         public frmAltaArticulo()
         {
             InitializeComponent();
@@ -31,6 +33,12 @@ namespace TrabajoPracticoDos
 
             try
             {
+            
+                if (Articulo == null)
+            {
+
+                    Articulo = new Articulo();
+            }
                 nuevo.Codigo = txtCodigo.Text;
                 nuevo.Nombre = txtNombre.Text;
                 nuevo.Descripcion = txtDescripcion.Text;

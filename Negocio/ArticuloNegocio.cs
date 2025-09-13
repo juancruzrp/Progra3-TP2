@@ -125,8 +125,30 @@ namespace Negocio
 
         public void modificar(Articulo modificar)
         {
+            AccesoDatos datos = new AccesoDatos();
 
+            try 
+            {
+                datos.setearConsulta("update ARTICULOS set Codigo= @Codigo, Nombre=@Nombre, Descripcion=@Descripcion, IdMarca=@IdMarca, IdCategoria=@IdCategoria, Precio=@Precio where Id=@Id");
+                datos.setearParametro("@Codigo", modificar.Codigo);
+                datos.setearParametro("@Nombre", modificar.Nombre); 
+                datos.setearParametro("@Descripcion", modificar.Descripcion);
+                datos.setearParametro("@IdMarca", modificar.Marca.Id);
+                datos.setearParametro("@IdCategoria", modificar.Categoria.Id);
+                datos.setearParametro("@Precio", modificar.Precio);
+                datos.setearParametro("@Id", modificar.Id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+            
         }
-
     }
 }
