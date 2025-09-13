@@ -35,15 +35,17 @@ namespace TrabajoPracticoDos
             {
             
                 if (Articulo == null)
-            {
-
+                {
                     Articulo = new Articulo();
-            }
+                }
                 nuevo.Codigo = txtCodigo.Text;
                 nuevo.Nombre = txtNombre.Text;
                 nuevo.Descripcion = txtDescripcion.Text;
                 nuevo.Marca = (Marca)cboMarca.SelectedItem;
                 nuevo.Categoria = (Categoria)cboCategoria.SelectedItem;
+                double precio;
+                double.TryParse(txtPrecio.Text, out precio);
+                nuevo.Precio = precio;
                 
                 if (nuevo.Id != 0)
                 {
