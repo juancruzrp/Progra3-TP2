@@ -15,11 +15,19 @@ namespace TrabajoPracticoDos
     public partial class frmAltaArticulo : Form
     {
         // Agregar este campo a la clase frmAltaArticulo
+
         private Articulo Articulo;
         public frmAltaArticulo()
         {
             InitializeComponent();
         }
+
+        public frmAltaArticulo(Articulo articulo)
+        {
+            InitializeComponent();
+            this.Articulo = articulo;
+        }
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -78,6 +86,18 @@ namespace TrabajoPracticoDos
             {
                 cboMarca.DataSource = marcaNegocio.listar();
                 cboCategoria.DataSource = categoriaNegocio.listarCategorias();
+                
+                if (Articulo != null)
+                {
+                    txtCodigo.Text = Articulo.Codigo;
+                    txtNombre.Text = Articulo.Nombre;
+                    txtDescripcion.Text = Articulo.Descripcion;
+                    txtPrecio.Text = Articulo.Precio.ToString();
+                    txtUrlImagen.Text = Articulo.ImagenUrl;
+                    cboMarca.SelectedValue = Articulo.Marca.Id;
+                    cboCategoria.SelectedValue = Articulo.Categoria.Id;
+                    cargarImagen(Articulo.ImagenUrl);
+                }
             }
             catch (Exception ex)
             {
@@ -107,6 +127,79 @@ namespace TrabajoPracticoDos
             }
         }
 
+        private void txtUrlImagen_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void lblUrlImagen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPrecio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCategoria_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMarca_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxArticulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbDescripcion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbNombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbCodigo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

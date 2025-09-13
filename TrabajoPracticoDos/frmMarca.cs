@@ -17,6 +17,7 @@ namespace TrabajoPracticoDos
         private DataGridView dgvMarcas;
         private Button btnAgregarMarca;
         private Button btnEliminarMarca;
+        private Button btnModificar; // Declaración del botón Modificar
 
         public frmMarca()
         {
@@ -58,6 +59,7 @@ namespace TrabajoPracticoDos
             this.btnEliminarMarca.TabIndex = 2;
             this.btnEliminarMarca.Text = "Eliminar Marca";
             this.btnEliminarMarca.UseVisualStyleBackColor = true;
+            this.btnEliminarMarca.Click += new System.EventHandler(this.btnEliminarMarca_Click);
             // 
             // frmMarca
             // 
@@ -67,17 +69,27 @@ namespace TrabajoPracticoDos
             this.Controls.Add(this.dgvMarcas);
             this.Name = "frmMarca";
             this.Text = "Ventana Marcas";
-            this.Load += new System.EventHandler(this.frmMarca_Load);
+           this.Load += new System.EventHandler(this.frmMarca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);
 
+     
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         private void frmMarca_Load(object sender, EventArgs e)
         {
             cargarMarca();
         }
 
         private List<Marca> listaMarcas;
+
+        public object dgvMarca { get; private set; }
+
         private void cargarMarca()
         {
             MarcaNegocio negMarc = new MarcaNegocio(); // tu clase que contiene listar()
@@ -104,6 +116,29 @@ namespace TrabajoPracticoDos
         private void dgvMarcas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnEliminarMarca_Click(object sender, EventArgs e)
+        {
+            MarcaNegocio negocio = new MarcaNegocio();
+            Marca seleccionada;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Desea eliminar permanentemente esta marca?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+    
+                    seleccionada = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+                    negocio.eliminarFisico(seleccionada.Id);
+                    cargarMarca();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

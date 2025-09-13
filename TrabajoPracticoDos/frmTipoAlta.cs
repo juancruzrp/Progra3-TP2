@@ -18,7 +18,7 @@ namespace TrabajoPracticoDos
         {
             InitializeComponent();
         }
-
+        
         private void btnAltaArticulo_Click(object sender, EventArgs e)
         {
             frmAltaArticulo nuevoArticulo = new frmAltaArticulo();

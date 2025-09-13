@@ -149,21 +149,24 @@ namespace Negocio
         }
 
 
-        public void eliminarLogico(int id)
+        public void eliminarFisico(int id)
         {
             try
             {
-                AccesoDatos datos = new AccesoDatos();
-                datos.setearConsulta("update MARCAS set Activo = 0 Where id = @id");
-                datos.setearParametro("@id", id);
-                datos.ejecutarAccion();
+                AccesoDatos acceso = new AccesoDatos();
+                acceso.setearConsulta("DELETE FROM MARCAS where Id = @id");
+                acceso.setearParametro("@id", id);
+                acceso.ejecutarAccion();
             }
             catch (Exception ex)
             {
+
                 throw ex;
             }
+
         }
+    }
 
 
     }
-}
+

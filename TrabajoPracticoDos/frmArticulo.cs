@@ -102,9 +102,18 @@ namespace TrabajoPracticoDos
             }
         }
 
-        ///private void btnModificar(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            {
+                Articulo seleccionado;
+                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
+                modificar.ShowDialog();
+                cargar();
+            }
 
 
+    }
 
     }
 }
