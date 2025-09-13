@@ -34,5 +34,10 @@ namespace TrabajoPracticoDos
             frmCategoria nuevaCategoria = new frmCategoria();
             nuevaCategoria.ShowDialog();
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

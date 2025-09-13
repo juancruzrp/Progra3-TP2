@@ -39,7 +39,7 @@
             // 
             this.btnAltaArticulo.Location = new System.Drawing.Point(44, 121);
             this.btnAltaArticulo.Name = "btnAltaArticulo";
-            this.btnAltaArticulo.Size = new System.Drawing.Size(79, 48);
+            this.btnAltaArticulo.Size = new System.Drawing.Size(112, 48);
             this.btnAltaArticulo.TabIndex = 0;
             this.btnAltaArticulo.Text = "Nuevo Articulo";
             this.btnAltaArticulo.UseVisualStyleBackColor = true;
@@ -49,7 +49,7 @@
             // 
             this.btnAltaMarca.Location = new System.Drawing.Point(187, 121);
             this.btnAltaMarca.Name = "btnAltaMarca";
-            this.btnAltaMarca.Size = new System.Drawing.Size(75, 48);
+            this.btnAltaMarca.Size = new System.Drawing.Size(116, 48);
             this.btnAltaMarca.TabIndex = 1;
             this.btnAltaMarca.Text = "Nueva Marca";
             this.btnAltaMarca.UseVisualStyleBackColor = true;
@@ -57,9 +57,9 @@
             // 
             // btnAltaCategoria
             // 
-            this.btnAltaCategoria.Location = new System.Drawing.Point(320, 121);
+            this.btnAltaCategoria.Location = new System.Drawing.Point(336, 121);
             this.btnAltaCategoria.Name = "btnAltaCategoria";
-            this.btnAltaCategoria.Size = new System.Drawing.Size(77, 48);
+            this.btnAltaCategoria.Size = new System.Drawing.Size(108, 48);
             this.btnAltaCategoria.TabIndex = 2;
             this.btnAltaCategoria.Text = "Nueva Categoria";
             this.btnAltaCategoria.UseVisualStyleBackColor = true;
@@ -68,7 +68,7 @@
             // lblAlta
             // 
             this.lblAlta.AutoSize = true;
-            this.lblAlta.Location = new System.Drawing.Point(154, 55);
+            this.lblAlta.Location = new System.Drawing.Point(184, 55);
             this.lblAlta.Name = "lblAlta";
             this.lblAlta.Size = new System.Drawing.Size(129, 13);
             this.lblAlta.TabIndex = 3;
@@ -76,25 +76,28 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(176, 210);
+            this.btnVolver.Location = new System.Drawing.Point(175, 200);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(96, 56);
+            this.btnVolver.Size = new System.Drawing.Size(138, 57);
             this.btnVolver.TabIndex = 4;
             this.btnVolver.Text = "Volver al menu anterior";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // frmTipoAlta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 333);
+            this.ClientSize = new System.Drawing.Size(493, 320);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.lblAlta);
             this.Controls.Add(this.btnAltaCategoria);
             this.Controls.Add(this.btnAltaMarca);
             this.Controls.Add(this.btnAltaArticulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmTipoAlta";
-            this.Text = "frmTipoAlta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Ventana de Altas";
             this.ResumeLayout(false);
             this.PerformLayout();
 

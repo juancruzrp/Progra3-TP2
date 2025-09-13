@@ -76,7 +76,7 @@ namespace TrabajoPracticoDos
             try
             {
                 cboMarca.DataSource = marcaNegocio.listar();
-                cboCategoria.DataSource = categoriaNegocio.listar();
+                cboCategoria.DataSource = categoriaNegocio.listarCategorias();
             }
             catch (Exception ex)
             {
