@@ -104,6 +104,7 @@ namespace TrabajoPracticoDos
                 if (respuesta == DialogResult.Yes)
                 {
                     seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                    negocio.eliminarImagen(seleccionado.Id);
                     negocio.eliminar(seleccionado.Id);
                     cargar();
                 }
