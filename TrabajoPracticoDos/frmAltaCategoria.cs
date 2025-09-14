@@ -36,6 +36,12 @@ namespace TrabajoPracticoDos
 
         private void btnAceptar_Click(object sender, EventArgs e, Categoria categoria)
         {
+            if (string.IsNullOrWhiteSpace(txtCategoria.Text))
+            {
+                MessageBox.Show("El campo Marca es obligatorio para una marca.", "Campo obligatorio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCategoria.Focus();
+                return;
+            }
             Categoria nueva = new Categoria();
             CategoriaNegocio negocio = new CategoriaNegocio();
 
