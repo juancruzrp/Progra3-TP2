@@ -31,20 +31,21 @@
             this.dgvCategoria = new System.Windows.Forms.DataGridView();
             this.btnAgregarCategoria = new System.Windows.Forms.Button();
             this.btnEliminarCategoria = new System.Windows.Forms.Button();
+            this.btnmodificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvCategoria
             // 
             this.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategoria.Location = new System.Drawing.Point(57, 52);
+            this.dgvCategoria.Location = new System.Drawing.Point(52, 51);
             this.dgvCategoria.Name = "dgvCategoria";
             this.dgvCategoria.Size = new System.Drawing.Size(240, 150);
             this.dgvCategoria.TabIndex = 0;
             // 
             // btnAgregarCategoria
             // 
-            this.btnAgregarCategoria.Location = new System.Drawing.Point(46, 236);
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(32, 236);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
             this.btnAgregarCategoria.Size = new System.Drawing.Size(88, 40);
             this.btnAgregarCategoria.TabIndex = 1;
@@ -54,7 +55,7 @@
             // 
             // btnEliminarCategoria
             // 
-            this.btnEliminarCategoria.Location = new System.Drawing.Point(163, 235);
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(238, 235);
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
             this.btnEliminarCategoria.Size = new System.Drawing.Size(77, 41);
             this.btnEliminarCategoria.TabIndex = 2;
@@ -62,11 +63,22 @@
             this.btnEliminarCategoria.UseVisualStyleBackColor = true;
             this.btnEliminarCategoria.Click += new System.EventHandler(this.btnEliminarCategoria_Click);
             // 
+            // btnmodificar
+            // 
+            this.btnmodificar.Location = new System.Drawing.Point(136, 236);
+            this.btnmodificar.Name = "btnmodificar";
+            this.btnmodificar.Size = new System.Drawing.Size(77, 41);
+            this.btnmodificar.TabIndex = 3;
+            this.btnmodificar.Text = "Modificar";
+            this.btnmodificar.UseVisualStyleBackColor = true;
+            this.btnmodificar.Click += new System.EventHandler(this.bontonModificar);
+            // 
             // frmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(365, 303);
+            this.Controls.Add(this.btnmodificar);
             this.Controls.Add(this.btnEliminarCategoria);
             this.Controls.Add(this.btnAgregarCategoria);
             this.Controls.Add(this.dgvCategoria);
@@ -84,5 +96,6 @@
         private System.Windows.Forms.DataGridView dgvCategoria;
         private System.Windows.Forms.Button btnAgregarCategoria;
         private System.Windows.Forms.Button btnEliminarCategoria;
+        private System.Windows.Forms.Button btnmodificar;
     }
 }

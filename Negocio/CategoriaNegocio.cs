@@ -80,14 +80,14 @@ namespace Negocio
         }
 
 
-        public void modificar(Marca marca)
+        public void modificar(Categoria categoria)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("UPDATE MARCAS SET Descripcion=@Descripcion WHERE Id=@Id");
-                datos.setearParametro("@Descripcion", marca.Descripcion);
-                datos.setearParametro("@Id", marca.Id);
+                datos.setearConsulta("UPDATE CATEGORIAS SET Descripcion=@Descripcion WHERE Id=@Id");
+                datos.setearParametro("@Descripcion", categoria.Descripcion);
+                datos.setearParametro("@Id", categoria.Id);
 
                 datos.ejecutarAccion();
 

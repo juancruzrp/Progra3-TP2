@@ -73,5 +73,22 @@ namespace TrabajoPracticoDos
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void bontonModificar(object sender, EventArgs e)
+        {
+            if (dgvCategoria.CurrentRow != null)
+            {
+                Categoria seleccionado;
+                seleccionado = (Categoria)dgvCategoria.CurrentRow.DataBoundItem;
+                frmAltaCategoria modificar = new frmAltaCategoria(seleccionado);
+                modificar.ShowDialog();
+                cargarCategoria();
+            }
+
+            else
+            {
+                MessageBox.Show("Seleccione una categoría para modificar.");
+            }
+        }
     }
 }
