@@ -17,7 +17,8 @@ namespace TrabajoPracticoDos
         private DataGridView dgvMarcas;
         private Button btnAgregarMarca;
         private Button btnEliminarMarca;
-        private Button btnModificar; // Declaración del botón Modificar
+        private Button button1;
+        
 
         public frmMarca()
         {
@@ -29,6 +30,7 @@ namespace TrabajoPracticoDos
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
             this.btnAgregarMarca = new System.Windows.Forms.Button();
             this.btnEliminarMarca = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +45,7 @@ namespace TrabajoPracticoDos
             // 
             // btnAgregarMarca
             // 
-            this.btnAgregarMarca.Location = new System.Drawing.Point(48, 239);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(30, 239);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(96, 38);
             this.btnAgregarMarca.TabIndex = 1;
@@ -53,7 +55,7 @@ namespace TrabajoPracticoDos
             // 
             // btnEliminarMarca
             // 
-            this.btnEliminarMarca.Location = new System.Drawing.Point(173, 239);
+            this.btnEliminarMarca.Location = new System.Drawing.Point(236, 239);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
             this.btnEliminarMarca.Size = new System.Drawing.Size(89, 38);
             this.btnEliminarMarca.TabIndex = 2;
@@ -61,9 +63,20 @@ namespace TrabajoPracticoDos
             this.btnEliminarMarca.UseVisualStyleBackColor = true;
             this.btnEliminarMarca.Click += new System.EventHandler(this.btnEliminarMarca_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(139, 239);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 38);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Modificar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmMarca
             // 
             this.ClientSize = new System.Drawing.Size(383, 307);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEliminarMarca);
             this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.dgvMarcas);
@@ -139,6 +152,15 @@ namespace TrabajoPracticoDos
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Marca seleccionado;
+            seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+            frmAltaMarca modificar = new frmAltaMarca(seleccionado);
+            modificar.ShowDialog();
+            cargarMarca();
         }
     }
 }

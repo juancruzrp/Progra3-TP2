@@ -14,9 +14,18 @@ namespace TrabajoPracticoDos
 {
     public partial class frmAltaMarca : Form
     {
+        public Marca marca { get; }
+
         public frmAltaMarca()
         {
             InitializeComponent();
+        }
+
+        public frmAltaMarca(Marca marca)
+        {
+            InitializeComponent();
+            this.marca = marca;
+            Text = "Modificar Articulo";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
