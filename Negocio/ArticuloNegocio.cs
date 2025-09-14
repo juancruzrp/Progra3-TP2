@@ -161,7 +161,7 @@ namespace Negocio
 
             try
             {
-                datos.setearConsulta("update IMAGENES set ImagenUrl=@ImagenUrl where Id=@Id");
+                datos.setearConsulta("update IMAGENES set ImagenUrl=@ImagenUrl where IdArticulo=@Id");
                 datos.setearParametro("@ImagenUrl", nuevaUrl);
                 datos.setearParametro("@Id", id);
                 datos.ejecutarAccion();
@@ -203,7 +203,7 @@ namespace Negocio
                 AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("delete from IMAGENES where id = @Id");
+                datos.setearConsulta("delete from IMAGENES where idarticulo = @Id");
                 datos.setearParametro("@Id", id);
                 datos.ejecutarAccion();
             }
