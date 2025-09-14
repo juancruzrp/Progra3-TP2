@@ -25,7 +25,8 @@ namespace TrabajoPracticoDos
         {
             InitializeComponent();
             this.marca = marca;
-            Text = "Modificar Articulo";
+            Text = "Modificar Marca";
+            txtMarca.Text = marca.Descripcion;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -39,11 +40,24 @@ namespace TrabajoPracticoDos
             MarcaNegocio negocio = new MarcaNegocio();
 
             try
+
             {
+                if (marca!=null&& marca.Id != 0)
+                {
+                    marca.Descripcion = txtMarca.Text;
+                    negocio.modificar(marca);
+                    MessageBox.Show("Modificado exitosamente");
+                    Close();
+                    return;
+                }
+                else
+                {
+                Marca marca = new Marca();
                 nueva.Descripcion = txtMarca.Text;
                 negocio.agregar(nueva);
                 MessageBox.Show("Agregado exitosamente");
                 Close();
+                }
             }
             catch (Exception ex)
             {
