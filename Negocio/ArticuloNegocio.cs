@@ -13,17 +13,17 @@ namespace Negocio
 {
     public class ArticuloNegocio
     {
-        public List<Articulo> listar() 
+        public List<Articulo> listar()
         {
             List<Articulo> lista = new List<Articulo>();
             AccesoDatos datos = new AccesoDatos();
-            
+
             try
             {
-                datos.setearConsulta("select A.Id, Codigo, Nombre, A.Descripcion, M.Descripcion as Marca, C.Descripcion as Categoria, Precio, ImagenUrl from ARTICULOS A, IMAGENES I, MARCAS M, CATEGORIAS C where A.Id = I.IdArticulo and A.IdMarca = M.Id and A.IdCategoria = C.Id");
+                //datos.setearConsulta("select A.Id, Codigo, Nombre, A.Descripcion, M.Descripcion as Marca, C.Descripcion as Categoria, Precio, ImagenUrl from ARTICULOS A, IMAGENES I, MARCAS M, CATEGORIAS C where A.Id = I.IdArticulo and A.IdMarca = M.Id and A.IdCategoria = C.Id");
+                datos.setearConsulta("select A.Id, Codigo, Nombre, A.Descripcion, M.Descripcion as Marca, C.Descripcion as Categoria, Precio, ImagenUrl, M.Id as IdMarca, C.Id as IdCategoria from ARTICULOS A, IMAGENES I, MARCAS M, CATEGORIAS C where A.Id = I.IdArticulo and A.IdMarca = M.Id and A.IdCategoria = C.Id");
                 datos.ejecutarLectura();
 
-               
                 while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
@@ -37,20 +37,24 @@ namespace Negocio
 
                     if (!(datos.Lector["Descripcion"] is DBNull))
                         aux.Descripcion = (string)datos.Lector["Descripcion"];
-                    
+
                     aux.Marca = new Marca();
                     if (!(datos.Lector["Marca"] is DBNull))
                         aux.Marca.Descripcion = (string)datos.Lector["Marca"];
-                    
+
+                    aux.Marca.Id = (int)datos.Lector["IdMarca"];
+
                     aux.Categoria = new Categoria();
                     if (!(datos.Lector["Categoria"] is DBNull))
                         aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
 
+                    aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
+
                     if (!(datos.Lector["Precio"] is DBNull))
                         aux.Precio = Convert.ToDouble(datos.Lector["Precio"]);
-                    
+
                     aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
-                                                            
+
                     lista.Add(aux);
                 }
 
@@ -66,7 +70,7 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
-        
+
         public int agregar(Articulo nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -126,17 +130,18 @@ namespace Negocio
         {
             AccesoDatos datos = new AccesoDatos();
 
-            try 
+            try
             {
                 datos.setearConsulta("update ARTICULOS set Codigo= @Codigo, Nombre=@Nombre, Descripcion=@Descripcion, IdMarca=@IdMarca, IdCategoria=@IdCategoria, Precio=@Precio where Id=@Id");
                 datos.setearParametro("@Codigo", modificar.Codigo);
-                datos.setearParametro("@Nombre", modificar.Nombre); 
+                datos.setearParametro("@Nombre", modificar.Nombre);
                 datos.setearParametro("@Descripcion", modificar.Descripcion);
                 datos.setearParametro("@IdMarca", modificar.Marca.Id);
                 datos.setearParametro("@IdCategoria", modificar.Categoria.Id);
                 datos.setearParametro("@Precio", modificar.Precio);
                 datos.setearParametro("@Id", modificar.Id);
                 datos.ejecutarAccion();
+
 
             }
             catch (Exception ex)
@@ -147,9 +152,32 @@ namespace Negocio
             {
                 datos.cerrarConexion();
             }
-            
-        }
 
+        }
+               
+        public void modificarImagen(int id, string nuevaUrl)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("update IMAGENES set ImagenUrl=@ImagenUrl where Id=@Id");
+                datos.setearParametro("@ImagenUrl", nuevaUrl);
+                datos.setearParametro("@Id", id);
+                datos.ejecutarAccion();
+                 
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+    
         public void eliminar(int id)
         {
             try
@@ -165,5 +193,9 @@ namespace Negocio
                 throw ex;
             }
         }
+
+        
+
+
     }
 }

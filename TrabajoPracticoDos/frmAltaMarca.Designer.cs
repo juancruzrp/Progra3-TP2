@@ -80,6 +80,7 @@
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.lblNuevaMarca);
             this.Name = "frmAltaMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAltaMarca";
             this.Load += new System.EventHandler(this.frmAltaMarca_Load);
             this.ResumeLayout(false);

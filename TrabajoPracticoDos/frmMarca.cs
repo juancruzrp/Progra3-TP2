@@ -68,12 +68,12 @@ namespace TrabajoPracticoDos
             this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.dgvMarcas);
             this.Name = "frmMarca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventana Marcas";
-           this.Load += new System.EventHandler(this.frmMarca_Load);
+            this.Load += new System.EventHandler(this.frmMarca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);
 
-     
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Dominio;
+using Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Dominio;
-using Negocio;
 
 namespace TrabajoPracticoDos
 {
@@ -16,7 +17,8 @@ namespace TrabajoPracticoDos
     {
         // Agregar este campo a la clase frmAltaArticulo
 
-        private Articulo Articulo;
+        private Articulo articulo = null;
+
         public frmAltaArticulo()
         {
             InitializeComponent();
@@ -25,7 +27,8 @@ namespace TrabajoPracticoDos
         public frmAltaArticulo(Articulo articulo)
         {
             InitializeComponent();
-            this.Articulo = articulo;
+            this.articulo = articulo;
+            Text = "Modificar Articulo";
         }
 
 
@@ -36,34 +39,36 @@ namespace TrabajoPracticoDos
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Articulo nuevo = new Articulo();
+            ///Articulo nuevo = new Articulo();
             ArticuloNegocio negocio = new ArticuloNegocio();
 
             try
             {
             
-                if (Articulo == null)
+                if (articulo == null)
                 {
-                    Articulo = new Articulo();
+                   articulo = new Articulo();
                 }
-                nuevo.Codigo = txtCodigo.Text;
-                nuevo.Nombre = txtNombre.Text;
-                nuevo.Descripcion = txtDescripcion.Text;
-                nuevo.Marca = (Marca)cboMarca.SelectedItem;
-                nuevo.Categoria = (Categoria)cboCategoria.SelectedItem;
+                int Id = articulo.Id;
+                articulo.ImagenUrl = txtUrlImagen.Text;
+                articulo.Codigo = txtCodigo.Text;
+                articulo.Nombre = txtNombre.Text;
+                articulo.Descripcion = txtDescripcion.Text;
+                articulo.Marca = (Marca)cboMarca.SelectedItem;
+                articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
                 double precio;
                 double.TryParse(txtPrecio.Text, out precio);
-                nuevo.Precio = precio;
+                articulo.Precio = precio;
                 
-                if (nuevo.Id != 0)
+                if (articulo.Id != 0)
                 {
-                    negocio.modificar(nuevo);
+                    negocio.modificar(articulo);
+                    negocio.modificarImagen( Id, articulo.ImagenUrl);
                     MessageBox.Show("Modificado exitosamente");
                 }
                 else
                 {
-                    
-                    int idArticulo = negocio.agregar(nuevo);
+                    int idArticulo = negocio.agregar(articulo);
                     negocio.agregarImagen(idArticulo, txtUrlImagen.Text);
 
                     MessageBox.Show("Agregado exitosamente");
@@ -91,18 +96,17 @@ namespace TrabajoPracticoDos
                 cboCategoria.ValueMember = "Id";
                 cboCategoria.DisplayMember = "Descripcion";
 
-                if (Articulo != null)
+                if (articulo != null)
                 {
-                    txtCodigo.Text = Articulo.Codigo;
-                    txtNombre.Text = Articulo.Nombre;
-                    txtDescripcion.Text = Articulo.Descripcion;
-                    txtPrecio.Text = Articulo.Precio.ToString();
-                    txtUrlImagen.Text = Articulo.ImagenUrl;
-                    cargarImagen(Articulo.ImagenUrl);
-                    cboMarca.SelectedValue = Articulo.Marca.Id;
-                    cboCategoria.SelectedValue = Articulo.Categoria.Id;
-           
-            }
+                    txtCodigo.Text = articulo.Codigo;
+                    txtNombre.Text = articulo.Nombre;
+                    txtDescripcion.Text = articulo.Descripcion;
+                    txtPrecio.Text = articulo.Precio.ToString();
+                    txtUrlImagen.Text = articulo.ImagenUrl;
+                    cargarImagen(articulo.ImagenUrl);
+                    cboMarca.SelectedValue = articulo.Marca.Id;
+                    cboCategoria.SelectedValue = articulo.Categoria.Id;    
+                }
             }
             catch (Exception ex)
             {
@@ -132,10 +136,7 @@ namespace TrabajoPracticoDos
             }
         }
 
-        private void txtUrlImagen_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void lblUrlImagen_Click(object sender, EventArgs e)
         {
@@ -146,12 +147,7 @@ namespace TrabajoPracticoDos
         {
 
         }
-
-        private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+ 
         private void cboMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -206,5 +202,7 @@ namespace TrabajoPracticoDos
         {
 
         }
+
+               
     }
 }

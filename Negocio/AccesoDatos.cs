@@ -47,7 +47,7 @@ namespace Negocio
                 throw ex;
             }
         }
-
+ 
         public void ejecutarAccion()
         {
             comando.Connection = conexion;
@@ -95,6 +95,11 @@ namespace Negocio
             {
                 conexion.Close();
             }
+        }
+
+        public void limpiarParametros()
+        {
+            comando.Parameters.Clear();
         }
 
 
