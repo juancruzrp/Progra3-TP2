@@ -41,47 +41,53 @@ namespace TrabajoPracticoDos
             this.dgvMarcas.Location = new System.Drawing.Point(30, 43);
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMarcas.Size = new System.Drawing.Size(325, 190);
+            this.dgvMarcas.Size = new System.Drawing.Size(269, 190);
             this.dgvMarcas.TabIndex = 0;
             this.dgvMarcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarcas_CellContentClick);
             // 
             // btnAgregarMarca
             // 
+            this.btnAgregarMarca.BackColor = System.Drawing.Color.SeaGreen;
             this.btnAgregarMarca.Location = new System.Drawing.Point(30, 249);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(96, 38);
             this.btnAgregarMarca.TabIndex = 1;
             this.btnAgregarMarca.Text = "Agregar Marca";
-            this.btnAgregarMarca.UseVisualStyleBackColor = true;
+            this.btnAgregarMarca.UseVisualStyleBackColor = false;
             this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
             // 
             // btnEliminarMarca
             // 
+            this.btnEliminarMarca.BackColor = System.Drawing.Color.RosyBrown;
             this.btnEliminarMarca.Location = new System.Drawing.Point(265, 249);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
-            this.btnEliminarMarca.Size = new System.Drawing.Size(89, 38);
+            this.btnEliminarMarca.Size = new System.Drawing.Size(100, 38);
             this.btnEliminarMarca.TabIndex = 2;
             this.btnEliminarMarca.Text = "Eliminar Marca";
-            this.btnEliminarMarca.UseVisualStyleBackColor = true;
+            this.btnEliminarMarca.UseVisualStyleBackColor = false;
             this.btnEliminarMarca.Click += new System.EventHandler(this.btnEliminarMarca_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.button1.Location = new System.Drawing.Point(150, 249);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 38);
             this.button1.TabIndex = 3;
             this.button1.Text = "Modificar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmMarca
             // 
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(437, 327);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEliminarMarca);
             this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.dgvMarcas);
+            this.Font = new System.Drawing.Font("David Libre", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventana Marcas";

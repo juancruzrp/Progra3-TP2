@@ -37,24 +37,27 @@
             // lblNuevaMarca
             // 
             this.lblNuevaMarca.AutoSize = true;
-            this.lblNuevaMarca.Location = new System.Drawing.Point(71, 84);
+            this.lblNuevaMarca.Location = new System.Drawing.Point(83, 84);
+            this.lblNuevaMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNuevaMarca.Name = "lblNuevaMarca";
-            this.lblNuevaMarca.Size = new System.Drawing.Size(75, 13);
+            this.lblNuevaMarca.Size = new System.Drawing.Size(81, 13);
             this.lblNuevaMarca.TabIndex = 0;
             this.lblNuevaMarca.Text = "Nueva Marca:";
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(156, 81);
+            this.txtMarca.Location = new System.Drawing.Point(182, 81);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(100, 20);
+            this.txtMarca.Size = new System.Drawing.Size(116, 20);
             this.txtMarca.TabIndex = 1;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(60, 145);
+            this.btnAceptar.Location = new System.Drawing.Point(70, 145);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(88, 23);
             this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -62,9 +65,10 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(204, 145);
+            this.btnCancelar.Location = new System.Drawing.Point(238, 145);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(88, 23);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -72,13 +76,17 @@
             // 
             // frmAltaMarca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 249);
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ClientSize = new System.Drawing.Size(387, 249);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.lblNuevaMarca);
+            this.Font = new System.Drawing.Font("David Libre", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmAltaMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAltaMarca";

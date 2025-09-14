@@ -37,9 +37,10 @@
             // 
             // btnAltaArticulo
             // 
-            this.btnAltaArticulo.Location = new System.Drawing.Point(44, 121);
+            this.btnAltaArticulo.Location = new System.Drawing.Point(51, 121);
+            this.btnAltaArticulo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAltaArticulo.Name = "btnAltaArticulo";
-            this.btnAltaArticulo.Size = new System.Drawing.Size(112, 48);
+            this.btnAltaArticulo.Size = new System.Drawing.Size(131, 48);
             this.btnAltaArticulo.TabIndex = 0;
             this.btnAltaArticulo.Text = "Nuevo Articulo";
             this.btnAltaArticulo.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@
             // 
             // btnAltaMarca
             // 
-            this.btnAltaMarca.Location = new System.Drawing.Point(187, 121);
+            this.btnAltaMarca.Location = new System.Drawing.Point(218, 121);
+            this.btnAltaMarca.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAltaMarca.Name = "btnAltaMarca";
-            this.btnAltaMarca.Size = new System.Drawing.Size(116, 48);
+            this.btnAltaMarca.Size = new System.Drawing.Size(135, 48);
             this.btnAltaMarca.TabIndex = 1;
             this.btnAltaMarca.Text = "Nueva Marca";
             this.btnAltaMarca.UseVisualStyleBackColor = true;
@@ -57,9 +59,10 @@
             // 
             // btnAltaCategoria
             // 
-            this.btnAltaCategoria.Location = new System.Drawing.Point(336, 121);
+            this.btnAltaCategoria.Location = new System.Drawing.Point(392, 121);
+            this.btnAltaCategoria.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAltaCategoria.Name = "btnAltaCategoria";
-            this.btnAltaCategoria.Size = new System.Drawing.Size(108, 48);
+            this.btnAltaCategoria.Size = new System.Drawing.Size(126, 48);
             this.btnAltaCategoria.TabIndex = 2;
             this.btnAltaCategoria.Text = "Nueva Categoria";
             this.btnAltaCategoria.UseVisualStyleBackColor = true;
@@ -68,17 +71,19 @@
             // lblAlta
             // 
             this.lblAlta.AutoSize = true;
-            this.lblAlta.Location = new System.Drawing.Point(184, 55);
+            this.lblAlta.Location = new System.Drawing.Point(215, 55);
+            this.lblAlta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAlta.Name = "lblAlta";
-            this.lblAlta.Size = new System.Drawing.Size(129, 13);
+            this.lblAlta.Size = new System.Drawing.Size(147, 13);
             this.lblAlta.TabIndex = 3;
             this.lblAlta.Text = "Seleccione el tipo de alta:";
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(175, 200);
+            this.btnVolver.Location = new System.Drawing.Point(204, 200);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(138, 57);
+            this.btnVolver.Size = new System.Drawing.Size(161, 57);
             this.btnVolver.TabIndex = 4;
             this.btnVolver.Text = "Volver al menu anterior";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -86,15 +91,18 @@
             // 
             // frmTipoAlta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 320);
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ClientSize = new System.Drawing.Size(575, 320);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.lblAlta);
             this.Controls.Add(this.btnAltaCategoria);
             this.Controls.Add(this.btnAltaMarca);
             this.Controls.Add(this.btnAltaArticulo);
+            this.Font = new System.Drawing.Font("David Libre", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmTipoAlta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventana de Altas";
