@@ -26,10 +26,12 @@ namespace TrabajoPracticoDos
         private void frmArticulo_Load(object sender, EventArgs e)
         {
             cargar();
+            dgvArticulo.ClearSelection();
             cboCampo.Items.Add("Nombre");
             cboCampo.Items.Add("Marca");
             cboCampo.Items.Add("Categoria");
             cboCampo.Items.Add("Precio");
+
         }
 
         private void dgvArticulo_SelectionChanged(object sender, EventArgs e)
@@ -109,16 +111,19 @@ namespace TrabajoPracticoDos
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            if (dgvArticulo.CurrentRow == null)
             {
-                Articulo seleccionado;
-                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
-                frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
-                modificar.ShowDialog();
-                cargar();
+                MessageBox.Show("Por favor, seleccioná un artículo antes de modificar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
-
-    }
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+            frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
+            modificar.ShowDialog();
+            cargar();
+            
+        }
 
         private void ocultarColumna()
         {
