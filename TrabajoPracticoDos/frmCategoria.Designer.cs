@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategoria));
             this.dgvCategoria = new System.Windows.Forms.DataGridView();
             this.btnAgregarCategoria = new System.Windows.Forms.Button();
             this.btnEliminarCategoria = new System.Windows.Forms.Button();
@@ -40,7 +41,7 @@
             this.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategoria.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvCategoria.Location = new System.Drawing.Point(37, 43);
-            this.dgvCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCategoria.Name = "dgvCategoria";
             this.dgvCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCategoria.Size = new System.Drawing.Size(266, 188);
@@ -51,7 +52,7 @@
             this.btnAgregarCategoria.BackColor = System.Drawing.Color.SeaGreen;
             this.btnAgregarCategoria.Font = new System.Drawing.Font("Noto Naskh Arabic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCategoria.Location = new System.Drawing.Point(34, 249);
-            this.btnAgregarCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
             this.btnAgregarCategoria.Size = new System.Drawing.Size(145, 39);
             this.btnAgregarCategoria.TabIndex = 1;
@@ -63,7 +64,7 @@
             // 
             this.btnEliminarCategoria.BackColor = System.Drawing.Color.RosyBrown;
             this.btnEliminarCategoria.Location = new System.Drawing.Point(320, 249);
-            this.btnEliminarCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
             this.btnEliminarCategoria.Size = new System.Drawing.Size(118, 40);
             this.btnEliminarCategoria.TabIndex = 2;
@@ -75,7 +76,7 @@
             // 
             this.btnmodificar.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.btnmodificar.Location = new System.Drawing.Point(195, 249);
-            this.btnmodificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnmodificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.Size = new System.Drawing.Size(108, 40);
             this.btnmodificar.TabIndex = 3;
@@ -95,7 +96,8 @@
             this.Controls.Add(this.dgvCategoria);
             this.Font = new System.Drawing.Font("David Libre", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventana Categorias";

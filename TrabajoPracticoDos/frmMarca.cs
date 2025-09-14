@@ -27,6 +27,7 @@ namespace TrabajoPracticoDos
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMarca));
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
             this.btnAgregarMarca = new System.Windows.Forms.Button();
             this.btnEliminarMarca = new System.Windows.Forms.Button();
@@ -88,6 +89,7 @@ namespace TrabajoPracticoDos
             this.Controls.Add(this.dgvMarcas);
             this.Font = new System.Drawing.Font("David Libre", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventana Marcas";
