@@ -39,6 +39,16 @@ namespace TrabajoPracticoDos
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrWhiteSpace(txtCodigo.Text) ||
+                string.IsNullOrWhiteSpace(txtNombre.Text) ||
+                string.IsNullOrWhiteSpace(txtPrecio.Text))
+            {
+                MessageBox.Show("Codigo, Nombre y Precio son campos obligatorios para un articulo.", "Campos obligatorios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; 
+            }
+
+
             ArticuloNegocio negocio = new ArticuloNegocio();
                         
             try
@@ -210,6 +220,9 @@ namespace TrabajoPracticoDos
 
         }
 
-               
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }
