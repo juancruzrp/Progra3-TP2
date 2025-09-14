@@ -31,6 +31,7 @@ namespace TrabajoPracticoDos
             cboCampo.Items.Add("Marca");
             cboCampo.Items.Add("Categoria");
             cboCampo.Items.Add("Precio");
+            cboCampo.SelectedIndex = 0;
 
         }
 
@@ -182,6 +183,18 @@ namespace TrabajoPracticoDos
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
+                if (cboCampo.SelectedItem == null)
+                {
+                    MessageBox.Show("Por favor, selecciona un campo para filtrar.");
+                    return;
+                }
+
+                if (cboCriterio.SelectedItem == null)
+                {
+                    MessageBox.Show("Por favor, selecciona un criterio para filtrar.");
+                    return;
+                }
+
                 string campo = cboCampo.SelectedItem.ToString();
                 string criterio = cboCriterio.SelectedItem.ToString();
                 string filtro = txtFiltroAvanzado.Text;
