@@ -219,7 +219,7 @@ namespace Negocio
                             break;
 
                     }
-                    return lista;
+                   
                 }
                 else if (campo == "Nombre")
                 {
