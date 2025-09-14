@@ -44,7 +44,7 @@ namespace TrabajoPracticoDos
                 string.IsNullOrWhiteSpace(txtNombre.Text) ||
                 string.IsNullOrWhiteSpace(txtPrecio.Text))
             {
-                MessageBox.Show("Codigo, Nombre y Precio son campos obligatorios para un articulo.", "Campos obligatorios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Codigo, Nombre, Marca, Categoria y Precio son campos obligatorios para un articulo.", "Campos obligatorios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return; 
             }
 
