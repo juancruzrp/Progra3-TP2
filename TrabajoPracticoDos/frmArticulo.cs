@@ -31,8 +31,11 @@ namespace TrabajoPracticoDos
 
         private void dgvArticulo_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.ImagenUrl);
+            if(dgvArticulo.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.ImagenUrl);
+            }
         }
 
         private void cargar()
@@ -42,8 +45,7 @@ namespace TrabajoPracticoDos
             {
                 listaArticulo = artNegocio.listar();
                 dgvArticulo.DataSource = listaArticulo;
-                dgvArticulo.Columns["ImagenUrl"].Visible = false;
-                dgvArticulo.Columns["Id"].Visible = false;
+                ocultarColumna();
                 cargarImagen(listaArticulo[0].ImagenUrl);
             }
             catch (Exception ex)
@@ -115,5 +117,29 @@ namespace TrabajoPracticoDos
 
     }
 
+        private void ocultarColumna()
+        {
+            dgvArticulo.Columns["ImagenUrl"].Visible = false;
+            dgvArticulo.Columns["Id"].Visible = false;
+        }
+
+        private void txtFiltroRapido_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> listaFiltrada;
+            string filtro = txtFiltroRapido.Text;
+
+            if(filtro.Length >= 3)
+            {
+                listaFiltrada = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Descripcion.ToUpper().Contains(filtro.ToUpper()) );
+            }
+            else
+            {
+                listaFiltrada = listaArticulo;
+            }
+            
+            dgvArticulo.DataSource = null;
+            dgvArticulo.DataSource = listaFiltrada;
+            ocultarColumna();
+        }
     }
 }
