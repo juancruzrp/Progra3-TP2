@@ -90,7 +90,13 @@ namespace TrabajoPracticoDos
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             Articulo seleccionado;
-            
+
+            if (dgvArticulo.CurrentRow == null)
+            {
+                MessageBox.Show("Por favor, seleccioná el artículo a eliminar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 DialogResult respuesta = MessageBox.Show("¿Desea eliminar el articulo?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -113,7 +119,7 @@ namespace TrabajoPracticoDos
         {
             if (dgvArticulo.CurrentRow == null)
             {
-                MessageBox.Show("Por favor, seleccioná un artículo antes de modificar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor, seleccioná el artículo a modificar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

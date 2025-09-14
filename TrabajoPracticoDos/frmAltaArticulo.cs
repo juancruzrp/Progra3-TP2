@@ -39,9 +39,8 @@ namespace TrabajoPracticoDos
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            ///Articulo nuevo = new Articulo();
             ArticuloNegocio negocio = new ArticuloNegocio();
-
+                        
             try
             {
             
@@ -62,9 +61,17 @@ namespace TrabajoPracticoDos
                 
                 if (articulo.Id != 0)
                 {
-                    negocio.modificar(articulo);
-                    negocio.modificarImagen( Id, articulo.ImagenUrl);
-                    MessageBox.Show("Modificado exitosamente");
+                    
+                    DialogResult respuesta = MessageBox.Show("Esta seguro de modificar el articulo?.", "Atención", MessageBoxButtons.YesNo , MessageBoxIcon.Warning);
+
+                    if (respuesta == DialogResult.Yes) 
+                    { 
+                        negocio.modificar(articulo);
+                        negocio.modificarImagen( Id, articulo.ImagenUrl);
+                        MessageBox.Show("Modificado exitosamente");
+                        
+                    }
+                                            
                 }
                 else
                 {
