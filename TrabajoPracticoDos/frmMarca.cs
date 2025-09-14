@@ -37,15 +37,17 @@ namespace TrabajoPracticoDos
             // dgvMarcas
             // 
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMarcas.Location = new System.Drawing.Point(48, 43);
+            this.dgvMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvMarcas.Location = new System.Drawing.Point(30, 43);
             this.dgvMarcas.Name = "dgvMarcas";
-            this.dgvMarcas.Size = new System.Drawing.Size(240, 150);
+            this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMarcas.Size = new System.Drawing.Size(325, 190);
             this.dgvMarcas.TabIndex = 0;
             this.dgvMarcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarcas_CellContentClick);
             // 
             // btnAgregarMarca
             // 
-            this.btnAgregarMarca.Location = new System.Drawing.Point(30, 239);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(30, 249);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(96, 38);
             this.btnAgregarMarca.TabIndex = 1;
@@ -55,7 +57,7 @@ namespace TrabajoPracticoDos
             // 
             // btnEliminarMarca
             // 
-            this.btnEliminarMarca.Location = new System.Drawing.Point(236, 239);
+            this.btnEliminarMarca.Location = new System.Drawing.Point(265, 249);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
             this.btnEliminarMarca.Size = new System.Drawing.Size(89, 38);
             this.btnEliminarMarca.TabIndex = 2;
@@ -65,7 +67,7 @@ namespace TrabajoPracticoDos
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(139, 239);
+            this.button1.Location = new System.Drawing.Point(150, 249);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 38);
             this.button1.TabIndex = 3;
@@ -75,7 +77,7 @@ namespace TrabajoPracticoDos
             // 
             // frmMarca
             // 
-            this.ClientSize = new System.Drawing.Size(383, 307);
+            this.ClientSize = new System.Drawing.Size(437, 327);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEliminarMarca);
             this.Controls.Add(this.btnAgregarMarca);

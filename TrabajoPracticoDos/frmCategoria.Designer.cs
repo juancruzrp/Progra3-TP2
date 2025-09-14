@@ -38,16 +38,18 @@
             // dgvCategoria
             // 
             this.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategoria.Location = new System.Drawing.Point(52, 51);
+            this.dgvCategoria.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvCategoria.Location = new System.Drawing.Point(32, 42);
             this.dgvCategoria.Name = "dgvCategoria";
-            this.dgvCategoria.Size = new System.Drawing.Size(240, 150);
+            this.dgvCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCategoria.Size = new System.Drawing.Size(334, 188);
             this.dgvCategoria.TabIndex = 0;
             // 
             // btnAgregarCategoria
             // 
-            this.btnAgregarCategoria.Location = new System.Drawing.Point(32, 236);
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(29, 249);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
-            this.btnAgregarCategoria.Size = new System.Drawing.Size(88, 40);
+            this.btnAgregarCategoria.Size = new System.Drawing.Size(110, 40);
             this.btnAgregarCategoria.TabIndex = 1;
             this.btnAgregarCategoria.Text = "Agregar Categoria";
             this.btnAgregarCategoria.UseVisualStyleBackColor = true;
@@ -55,9 +57,9 @@
             // 
             // btnEliminarCategoria
             // 
-            this.btnEliminarCategoria.Location = new System.Drawing.Point(238, 235);
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(244, 249);
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
-            this.btnEliminarCategoria.Size = new System.Drawing.Size(77, 41);
+            this.btnEliminarCategoria.Size = new System.Drawing.Size(101, 40);
             this.btnEliminarCategoria.TabIndex = 2;
             this.btnEliminarCategoria.Text = "Eliminar Categoria";
             this.btnEliminarCategoria.UseVisualStyleBackColor = true;
@@ -65,9 +67,9 @@
             // 
             // btnmodificar
             // 
-            this.btnmodificar.Location = new System.Drawing.Point(136, 236);
+            this.btnmodificar.Location = new System.Drawing.Point(145, 249);
             this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(77, 41);
+            this.btnmodificar.Size = new System.Drawing.Size(93, 40);
             this.btnmodificar.TabIndex = 3;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = true;
@@ -77,7 +79,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 303);
+            this.ClientSize = new System.Drawing.Size(435, 321);
             this.Controls.Add(this.btnmodificar);
             this.Controls.Add(this.btnEliminarCategoria);
             this.Controls.Add(this.btnAgregarCategoria);
