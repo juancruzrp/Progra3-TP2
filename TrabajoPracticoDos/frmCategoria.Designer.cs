@@ -50,7 +50,7 @@
             // btnAgregarCategoria
             // 
             this.btnAgregarCategoria.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnAgregarCategoria.Font = new System.Drawing.Font("Noto Naskh Arabic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCategoria.Font = new System.Drawing.Font("David Libre", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCategoria.Location = new System.Drawing.Point(34, 249);
             this.btnAgregarCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";

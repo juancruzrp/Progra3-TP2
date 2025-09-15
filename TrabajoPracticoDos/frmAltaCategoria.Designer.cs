@@ -37,9 +37,10 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(66, 180);
+            this.btnAceptar.Location = new System.Drawing.Point(77, 180);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(83, 36);
+            this.btnAceptar.Size = new System.Drawing.Size(97, 36);
             this.btnAceptar.TabIndex = 0;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(199, 180);
+            this.btnCancelar.Location = new System.Drawing.Point(232, 180);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(81, 36);
+            this.btnCancelar.Size = new System.Drawing.Size(94, 36);
             this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -59,31 +61,35 @@
             // 
             this.lblNuevaCategoria.AutoSize = true;
             this.lblNuevaCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblNuevaCategoria.Location = new System.Drawing.Point(71, 96);
+            this.lblNuevaCategoria.Location = new System.Drawing.Point(83, 96);
+            this.lblNuevaCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNuevaCategoria.Name = "lblNuevaCategoria";
-            this.lblNuevaCategoria.Size = new System.Drawing.Size(88, 13);
+            this.lblNuevaCategoria.Size = new System.Drawing.Size(98, 13);
             this.lblNuevaCategoria.TabIndex = 2;
             this.lblNuevaCategoria.Text = "Categoria nueva:";
             // 
             // txtCategoria
             // 
-            this.txtCategoria.Location = new System.Drawing.Point(165, 93);
+            this.txtCategoria.Location = new System.Drawing.Point(192, 93);
+            this.txtCategoria.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(100, 20);
+            this.txtCategoria.Size = new System.Drawing.Size(116, 20);
             this.txtCategoria.TabIndex = 3;
             // 
             // frmAltaCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(339, 284);
+            this.ClientSize = new System.Drawing.Size(396, 284);
             this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.lblNuevaCategoria);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
+            this.Font = new System.Drawing.Font("David Libre", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmAltaCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alta de categorias";
